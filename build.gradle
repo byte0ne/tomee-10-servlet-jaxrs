@@ -1,0 +1,24 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jakarta EE 10 API
+    compileOnly 'jakarta.platform:jakarta.jakartaee-api:10.0.0'
+}
+
+war {
+    archiveFileName = 'tomee-bug-demo.war'
+}
+
+// Optional: If you want to use Gradle to run TomEE
+// You would need to add a TomEE Gradle plugin
